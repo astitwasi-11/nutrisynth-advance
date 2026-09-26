@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NutriSynth - Personalized nutrition platform powered by data">
+    <title>NutriSynth — Personalized Nutrition Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="app-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">
+                <span class="logo-icon">🧬</span>
+                <span class="logo-text">NutriSynth</span>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#why-nutrisynth" class="nav-link">Why NutriSynth</a>
+                <a href="#" class="nav-link" id="aboutLink">About</a>
+                <button class="nav-btn-start" id="navStartBtn">Start Journey</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="heroSection">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">NutriSynth</h1>
+                <p class="hero-subtitle">Personalized Nutrition. Powered by Data.</p>
+                <p class="hero-description">
+                    Understand your nutritional needs, discover personalized meals, identify potential dietary gaps, and improve your meals with evidence-based guidance.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" id="ctaPrimary">Start Your Nutrition Journey</button>
+                    <button class="btn btn-secondary btn-lg" id="ctaSecondary">Explore NutriSynth</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="hero-illustration">
+                    <!-- Nutrition dashboard visual -->
+                    <defs>
+                        <linearGradient id="heroGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:var(--primary-color);stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:var(--accent-color);stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="heroGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:var(--secondary-color);stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:var(--primary-color);stop-opacity:0.8" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Background circles -->
+                    <circle cx="200" cy="200" r="180" fill="url(#heroGradient1)" opacity="0.1"/>
+                    <circle cx="200" cy="200" r="140" fill="url(#heroGradient2)" opacity="0.15"/>
+                    
+                    <!-- Central dashboard card -->
+                    <g class="dashboard-card">
+                        <rect x="80" y="100" width="240" height="200" rx="20" fill="white" filter="drop-shadow(0 10px 30px rgba(0,0,0,0.1))"/>
+                        
+                        <!-- Dashboard header -->
+                        <text x="100" y="130" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#0f172a">Your Daily Targets</text>
+                        
+                        <!-- Protein bar -->
+                        <g>
+                            <text x="100" y="160" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Protein</text>
+                            <rect x="100" y="168" width="190" height="6" rx="3" fill="#e2e8f0"/>
+                            <rect x="100" y="168" width="140" height="6" rx="3" fill="var(--primary-color)"/>
+                            <text x="295" y="175" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#0f172a">95g</text>
+                        </g>
+                        
+                        <!-- Carbs bar -->
+                        <g>
+                            <text x="100" y="200" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Carbs</text>
+                            <rect x="100" y="208" width="190" height="6" rx="3" fill="#e2e8f0"/>
+                            <rect x="100" y="208" width="160" height="6" rx="3" fill="var(--accent-color)"/>
+                            <text x="295" y="215" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#0f172a">300g</text>
+                        </g>
+                        
+                        <!-- Fat bar -->
+                        <g>
+                            <text x="100" y="240" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Healthy Fats</text>
+                            <rect x="100" y="248" width="190" height="6" rx="3" fill="#e2e8f0"/>
+                            <rect x="100" y="248" width="115" height="6" rx="3" fill="var(--secondary-color)"/>
+                            <text x="295" y="255" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#0f172a">65g</text>
+                        </g>
+                    </g>
+                    
+                    <!-- Floating elements -->
+                    <g class="floating-element" style="animation: float 3s ease-in-out infinite;">
+                        <circle cx="320" cy="100" r="25" fill="var(--primary-color)" opacity="0.2"/>
+                        <text x="310" y="108" font-size="28" text-anchor="middle">🥗</text>
+                    </g>
+                    
+                    <g class="floating-element" style="animation: float 3.5s ease-in-out infinite;">
+                        <circle cx="100" cy="320" r="25" fill="var(--accent-color)" opacity="0.2"/>
+                        <text x="100" y="328" font-size="28" text-anchor="middle">📊</text>
+                    </g>
+                    
+                    <g class="floating-element" style="animation: float 4s ease-in-out infinite;">
+                        <circle cx="320" cy="320" r="25" fill="var(--secondary-color)" opacity="0.2"/>
+                        <text x="320" y="328" font-size="28" text-anchor="middle">🧬</text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Tell Us About Yourself</h3>
+                    <p>Share your age, body metrics, activity level, and dietary preferences in our smooth onboarding flow.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Estimate Your Needs</h3>
+                    <p>NutriSynth calculates your personalized nutritional requirements based on evidence-based guidelines.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Get Meal Recommendations</h3>
+                    <p>Receive personalized meals tailored to your goals, preferences, and nutritional targets.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3>Analyze Your Nutrition</h3>
+                    <p>Understand your caloric intake, macro and micronutrient composition in detail.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">05</div>
+                    <h3>Identify Gaps</h3>
+                    <p>Discover potential nutritional limitations and get evidence-based solutions.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">06</div>
+                    <h3>Screen for Deficiencies</h3>
+                    <p>Use our dedicated deficiency check to screen for potential nutrient inadequacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why NutriSynth -->
+    <section class="section section-alt" id="why-nutrisynth">
+        <div class="container">
+            <h2 class="section-title">Why NutriSynth?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🍽</div>
+                    <h3>Personalized Meals</h3>
+                    <p>Meals based on your information and nutritional targets, not generic recommendations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Nutrition Analysis</h3>
+                    <p>Understand calories, protein, carbs, fats, fiber and relevant micronutrients in detail.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Food Analysis</h3>
+                    <p>Understand potential nutritional limitations and get actionable improvement suggestions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧬</div>
+                    <h3>Nutrient Status</h3>
+                    <p>Separate screening for potential nutrient inadequacy across multiple micronutrients.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Smart Alternatives</h3>
+                    <p>Find compatible food alternatives respecting your dietary preferences and allergies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Evidence-Based</h3>
+                    <p>All recommendations traceable to recognized nutrition reference sources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Nutrition?</h2>
+            <p>Start your personalized nutrition journey today.</p>
+            <button class="btn btn-primary btn-lg" id="ctaStart">Start Your Nutrition Journey</button>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="section disclaimer-section">
+        <div class="container disclaimer-content">
+            <h3>Important Disclaimer</h3>
+            <p>NutriSynth provides evidence-based general nutrition information and personalized dietary guidance based on the information provided. It does not diagnose medical conditions or confirm nutrient deficiencies. Nutritional needs can vary with health conditions, medications, allergies, laboratory findings, and other factors. <strong>Consult a qualified healthcare professional when appropriate.</strong></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 NutriSynth. Developed with ❤️ for personalized nutrition guidance.</p>
+            <p class="footer-version">Upgraded: detailed nutrition • personalized meals • evidence-based guidance</p>
+        </div>
+    </footer>
+
+    <!-- Main App Container (hidden until user starts) -->
+    <div id="appContainer" class="app-container" style="display: none;">
+        <!-- Onboarding will be injected here -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
